@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+</head>
+
+<body class="flex justify-center items-center h-screen">
+  <section class="shopping-container bg-red-600 min-h-screen flex-3 w-full relative">
+    <h1 class="mt-8 mx-auto text-center relative text-2xl font-bold">Shopping </h1>
+    <img id="shopping-cart-btn" class="absolute top-9 right-16 w-7 lg:hidden" src="images/Vector (1).png"
+      alt="shopping cart icon">
+    <div class="shopping-grid">
+      <div class="item-container">
+        <div class="image-wrapper">
+          <img src="" alt="">
+        </div>
+        <div class="amountChanger">
+          <button>-</button>
+          <p>1</p>
+          <button>+</button>
+        </div>
+        <h2>Eggs</h2>
+        <p>2.99</p>
+      </div>
+    </div>
+  </section>
+  <section id="shopping-cart"
+    class="cart-container bg-white absolute top-20 md:top-24 max-w-82 md:max-w-173.25 w-full lg:static mx-auto h-136 lg:min-h-screen lg:flex-1 rounded-2xl hidden">
+  </section>
+</body>
+
+</html>

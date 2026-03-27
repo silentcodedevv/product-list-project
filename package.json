@@ -1,0 +1,25 @@
+{
+  "name": "product-list-project",
+  "version": "1.0.0",
+  "description": "Product list with cart project",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silentcodedevv/product-list-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/silentcodedevv/product-list-project/issues"
+  },
+  "homepage": "https://github.com/silentcodedevv/product-list-project#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
