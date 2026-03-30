@@ -8,8 +8,9 @@
   <script src="main.js" defer></script>
 </head>
 
-<body class="flex justify-center items-center h-screen">
-  <section class=" shopping-container bg-red-600 min-h-screen flex-3 w-full relative">
+<body class="flex justify-center  h-screen font-poppins lg:px-24">
+  <div id="backdrop-filter" class="bg-black/40 absolute top-full left-full w-full min-h-screen"></div>
+  <section class=" shopping-container bg-white min-h-screen flex-3 w-full relative">
     <h1 class="mt-8 mx-auto text-center relative text-2xl font-bold">Shopping </h1>
     <img id="shopping-cart-btn" class="absolute top-9 right-16 w-7 cursor-pointer lg:hidden" src="images/Vector (1).png"
       alt="shopping cart icon">
@@ -28,20 +29,19 @@
       </div>
     </div>
   </section>
-  <div id="backdrop-filter" class="bg-black/40 top-0 left-0 absolute w-full min-h-screen hidden"></div>
   <section id="shopping-cart"
-    class="cart-container bg-white absolute top-20 md:top-24 max-w-82 md:max-w-173.25 w-full lg:static mx-auto h-136 lg:min-h-screen lg:flex-1 rounded-2xl hidden">
-    <img id="close-btn" class="absolute top-6 right-4 md:right-6 w-4 md:w-6 cursor-pointer lg:hidden"
+    class="cart-container bg-white absolute top-20 md:top-24 max-w-82 md:max-w-173.25 w-full lg:static mx-auto h-136 drop-shadow-xl md:h-136 lg:justify-start lg:flex-1 rounded-2xl lg:mt-[76px] hidden">
+    <img id="close-btn" class="absolute top-6 right-4  md:right-6 w-4 md:w-6 cursor-pointer lg:hidden"
       src="images/cross.png" alt="close button">
     <div class="item-container px-6 md:px-9 pt-10 h-16 w-full">
-      <h2 class="text-xl  md:text-2xl font-bold text-center lg:text-left">Your cart (<span>2</span>)</h2>
+      <h2 class="text-xl  md:text-2xl font-bold text-center lg:text-left text-[#6A83FE]">Your cart (<span>2</span>)</h2>
       <ul class="mt-6 md:mt-10">
         <li class="flex justify-between border-b-1 border-smalltext pb-4">
           <div class="item-info-container flex gap-8"> <img class="w-16 rounded-sm border-[#6AB3FE] border-2"
               src="images/eggs.png" alt="eggs">
-            <div class="item-text-container flex flex-col my-auto">
+            <div class="item-text-container flex flex-col my-auto gap-2">
               <h3 class="text-xl font-bold">Eggs</h3>
-              <small class="text-[16px] text-smalltext">1 x $17.99</small>
+              <small class="text-[16px] font-extralight text-[#8B9FFF]">1 x $17.99</small>
             </div>
           </div>
           <img class="w-4 h-4 cursor-pointer" src="images/ion--trash 1.png" alt="icon trash">
@@ -49,22 +49,21 @@
         <li class="flex justify-between border-b-1 border-smalltext py-4">
           <div class="item-info-container flex gap-8"> <img class="w-16 rounded-sm border-[#6AB3FE] border-2"
               src="images/beef-steak.png" alt="eggs">
-            <div class="item-text-container flex flex-col my-auto">
+            <div class="item-text-container flex flex-col my-auto gap-2">
               <h3 class="text-xl font-bold">Eggs</h3>
-              <small class="text-[16px] text-smalltext">1 x $2.99</small>
+              <small class="text-[16px] font-extralight text-[#8B9FFF]">1 x $2.99</small>
             </div>
           </div>
           <img class="w-4 h-4 cursor-pointer" src="images/ion--trash 1.png" alt="icon trash">
         </li>
       </ul>
       <div class="total-container flex justify-between items-center pt-4">
-        <p class="text-[#8B9FFF] text-xl">Total</p>
+        <p class="text-[#8B9FFF] text-xl font-light">Total</p>
         <p class="text-xl font-bold"><span id="total-sum">$43.02</span></p>
       </div>
       <div class="flex justify-center"> <button
-          class="text-xl font-bold text-white bg-gray-600 rounded-[50px] mt-10 w-69.25 h-13.75 cursor-pointer">Checkout</button>
+          class="text-xl font-bold text-white bg-[#6A83FE] rounded-[50px] mt-10 w-69.25 h-13.75 cursor-pointer">Checkout</button>
       </div>
-
     </div>
   </section>
 </body>
