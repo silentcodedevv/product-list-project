@@ -277,9 +277,6 @@
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
-  .w-40\.25 {
-    width: calc(var(--spacing) * 40.25);
-  }
   .w-58 {
     width: calc(var(--spacing) * 58);
   }
@@ -455,9 +452,6 @@
   }
   .text-\[\#8B9FFF\] {
     color: #8B9FFF;
-  }
-  .text-\[\#ACACAC\] {
-    color: #ACACAC;
   }
   .text-\[\#B7C3FF\] {
     color: #B7C3FF;

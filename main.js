@@ -1,17 +1,12 @@
-const shoppingCartBtn = document.getElementById("shopping-cart-btn");
-const shoppingCart = document.getElementById("shopping-cart");
-const backdropFilter = document.getElementById("backdrop-filter");
-const closeBtn = document.getElementById("close-btn");
+const itemContainer = document.querySelectorAll(".item-container");
+const amountChanger = document.querySelectorAll(".amount-changer");
 
-function openShoppingCart() {
-  shoppingCart.classList.toggle("hidden");
-  backdropFilter.classList.toggle("hidden");
-}
-
-function closeShoppingCart() {
-  shoppingCart.classList.toggle("hidden");
-  backdropFilter.classList.toggle("hidden");
-}
-
-shoppingCartBtn.addEventListener("click", openShoppingCart);
-closeBtn.addEventListener("click", closeShoppingCart);
+itemContainer.forEach(item => {
+  item.addEventListener("click", (e) => {
+    if (e.target.classList.contains("add-to-cart-btn")) {
+      amountChanger.forEach(amountChange => {
+        e.currentTarget.amountChange.toggle("hidden");
+      })
+    }
+  })
+})

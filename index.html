@@ -6,23 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
   <script src="main.js" defer></script>
+  <script src="navModal.js" defer></script>
 </head>
 
 <body class="flex justify-center  min-h-screen font-poppins mx-auto  lg:px-24">
   <section class="group-sections max-w-[1254px] gap-27.75 flex">
     <section class=" shopping-container bg-white min-h-screen flex-1 w-full relative max-w-188">
+      <h1 class="mt-8 mx-auto text-center relative text-2xl font-bold">Shopping </h1>
       <img id="shopping-cart-btn" class="absolute top-9 right-16 w-7 cursor-pointer lg:hidden"
         src="images/Vector (1).png" alt="shopping cart icon">
-      <h1 class="mt-8 mx-auto text-center relative text-2xl font-bold">Shopping </h1>
       <div class="shopping-grid grid grid-cols-1 justify-between w-58 mx-auto justify-items-center gap-[28px] sm:w-full
         md:grid-cols-3">
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/eggs.png" alt="eggs">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -34,13 +35,13 @@
           <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
           <p class="text-[#B7C3FF] text-center">$2.99</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Cucumber.png" alt="cucumbers">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -49,16 +50,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Cucumbers</h2>
+          <p class="text-[#B7C3FF] text-center">$1.49</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Cooking_oil.png" alt="cooking oil">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -67,16 +68,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Cooking Oil</h2>
+          <p class="text-[#B7C3FF] text-center">$4.99</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Chicken_meat.png" alt="chicken meat">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -85,16 +86,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Chicken Meat</h2>
+          <p class="text-[#B7C3FF] text-center">$10.46</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Beef Steak.png" alt="beef">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -103,16 +104,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Beef Steak</h2>
+          <p class="text-[#B7C3FF] text-center">$17.99</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Apple.png" alt="apples">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -121,16 +122,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Apples</h2>
+          <p class="text-[#B7C3FF] text-center">$1.97</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Potatoes.png" alt="Potatoes">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -139,16 +140,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Potatoes</h2>
+          <p class="text-[#B7C3FF] text-center">$4.05</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Nescafe.png" alt="nescafe">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -157,16 +158,16 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Nescafe Coffee</h2>
+          <p class="text-[#B7C3FF] text-center">$11.65</p>
         </div>
-        <div class="item-container w-58 mb-4">
+        <div class="item-container cursor-pointer w-58 mb-4">
           <div class="image-wrapper">
             <img src="" alt="">
           </div>
           <img src="images/Mulberry.png" alt="Mulberry">
           <button
-            class="flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
+            class="add-to-cart-btn flex gap-2 px-4 py-3 bg-none border border-black rounded-full mx-auto cursor-pointer max-w-40.25">
             <img class="w-5 cursor-pointer " src="images/Vector (1).png" alt="shopping cart icon">Add
             to cart</button>
           <div
@@ -175,8 +176,8 @@
             <p>1</p>
             <button>+</button>
           </div>
-          <h2 class="text-center mt-5 text-xl mb-2">Eggs</h2>
-          <p class="text-[#B7C3FF] text-center">$2.99</p>
+          <h2 class="text-center mt-5 text-xl mb-2">Mulberry</h2>
+          <p class="text-[#B7C3FF] text-center">$4.99</p>
         </div>
       </div>
     </section>
@@ -185,7 +186,7 @@
       class="z-50 cart-container bg-white absolute top-20 md:top-24 max-w-82 md:max-w-173.25 lg:max-w-97.75 w-full lg:static mx-auto h-136 drop-shadow-xl md:h-136 lg:justify-start lg:flex-1 rounded-2xl lg:mt-[76px]">
       <img id="close-btn" class="absolute top-6 right-4  md:right-6 w-4 md:w-6 cursor-pointer lg:hidden"
         src="images/cross.png" alt="close button">
-      <div class="item-container px-6 md:px-9 pt-10 h-16 w-full">
+      <div class="item-container cursor-pointer px-6 md:px-9 pt-10 h-16 w-full">
         <h2 class="text-xl  md:text-2xl font-bold text-center lg:text-left text-[#6A83FE]">Your cart (<span>2</span>)
         </h2>
         <ul class="mt-6 md:mt-10">
