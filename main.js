@@ -4,11 +4,32 @@ const yourCart = document.getElementById("your-cart");
 itemContainer.forEach(item => {
   item.addEventListener("click", (e) => {
     const addToCartBtn = e.target.classList.contains("add-to-cart-btn");
+
     const toggleAddToCart = item.querySelector(".add-to-cart-btn")
     const toggleAmountChanger = item.querySelector(".amount-changer");
     const nameOfProduct = item.querySelector("h2").textContent;
+    let amount = toggleAmountChanger.querySelector(".amount");
+    const incrementBtn = e.target.classList.contains("increment");
+    const decrementBtn = e.target.classList.contains("decrement");
+
+    let currentAmount = Number(amount.textContent);
+    currentAmount === 0 ? currentAmount++ : null;
+    amount.textContent = currentAmount;
+
+    if (incrementBtn) {
+      currentAmount++;
+      amount.textContent = currentAmount;
+    } else if (decrementBtn) {
+      currentAmount--;
+      amount.textContent = currentAmount;
+    }
+
+    currentAmount < 1 ? toggleAddToCart.classList.toggle("hidden") && toggleAmountChanger.classList.toggle("hidden") : null;
+
 
     addToCartBtn ? toggleAddToCart.classList.toggle("hidden") && toggleAmountChanger.classList.toggle("hidden") : null;
+
+    if (!addToCartBtn) return;
 
     yourCart.insertAdjacentHTML("afterbegin", `
     <li class="flex justify-between border-b border-smalltext pb-4">
@@ -16,10 +37,10 @@ itemContainer.forEach(item => {
                 src=${item.querySelector("img").src} alt=${item.querySelector("img").alt}>
               <div class="item-text-container flex flex-col my-auto gap-2">
                 <h3 class="text-xl font-bold">${nameOfProduct}</h3>
-                <small class="text-[16px] font-extralight text-[#8B9FFF]">1 x $${item.querySelector("span").textContent}</small>
+                <small class="text-[16px] font-extralight text-[#8B9FFF]">${currentAmount} x $${item.querySelector("span").textContent}</small>
               </div>
             </div>
             <img class="w-4 h-4 cursor-pointer" src="images/ion--trash 1.png" alt="icon trash">
-          </li>`)
+          </li>`);
   })
 })
