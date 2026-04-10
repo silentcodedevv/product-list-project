@@ -10,9 +10,10 @@
 </head>
 
 <body class="flex justify-center  min-h-screen font-poppins mx-auto  lg:px-24">
+  <div id="backdrop-filter" class="bg-black/40 z-4 inset-0 absolute w-full min-h-screen lg:hidden"></div>
   <section class="group-sections max-w-[1254px] gap-27.75 flex">
     <section class=" shopping-container bg-white min-h-screen flex-1 w-full relative max-w-188">
-      <h1 class="mt-8 mx-auto text-center relative text-2xl font-bold">Shopping </h1>
+      <h1 class="mt-8 mx-auto text-center relative text-2xl font-bold md:text-left lg:text-4xl">Shopping </h1>
       <img id="shopping-cart-btn" class="absolute top-9 right-16 w-7 cursor-pointer lg:hidden"
         src="images/Vector (1).png" alt="shopping cart icon">
       <div class="shopping-grid grid grid-cols-1 justify-between w-58 mx-auto justify-items-center gap-[28px] sm:w-full
@@ -70,9 +71,9 @@
             to cart</button>
           <div
             class="amount-changer flex justify-between bg-[#6A83FE] text-white  px-4 py-3 bg-none rounded-full mx-auto cursor-pointer w-full max-w-40.25 hidden">
-            <button class="cursor-pointer">-</button>
+            <button class="cursor-pointer decrement">-</button>
             <p class="amount"></p>
-            <button class="cursor-pointer">+</button>
+            <button class="cursor-pointer increment">+</button>
           </div>
           <h2 class="text-center mt-5 text-xl mb-2">Chicken Meat</h2>
           <p class="text-[#B7C3FF] text-center">$<span class="price">10.46</span></p>
@@ -154,7 +155,6 @@
         </div>
       </div>
     </section>
-    <!-- <div id="backdrop-filter" class="bg-black/40 z-4 inset-40 absolute w-full min-h-screen"></div> -->
     <section id="shopping-cart"
       class="z-50 cart-container bg-white absolute top-20 md:top-24 max-w-82 md:max-w-173.25 lg:max-w-97.75 w-full lg:static mx-auto h-auto drop-shadow-xl lg:justify-start lg:flex-1 rounded-2xl lg:mt-19">
       <img id="close-btn" class="absolute top-6 right-4  md:right-6 w-4 md:w-6 cursor-pointer lg:hidden"
@@ -164,7 +164,7 @@
         </h2>
         <ul class="mt-6 md:mt-10" id="your-cart">
         </ul>
-        <div class="total-container flex justify-between items-center pt-4">
+        <div class="total-container justify-between items-center pt-4 hidden">
           <p class="text-[#8B9FFF] text-xl font-light">Total</p>
           <p class="text-xl font-bold"><span id="total-sum">$43.02</span></p>
         </div>
