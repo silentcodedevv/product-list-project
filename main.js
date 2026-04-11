@@ -26,7 +26,17 @@ itemContainer.forEach(item => {
       if (currentAmount === 0) {
         toggleAddToCart.classList.toggle("hidden");
         toggleAmountChanger.classList.toggle("hidden");
-        return currentAmount;
+
+        const cartItem = yourCart.querySelectorAll("li");
+
+        cartItem.forEach(cart => {
+          const productName = cart.querySelector("h2").textContent;
+          console.log(productName)
+
+          if (nameOfProduct === productName) {
+            cart.remove();
+          }
+        })
       }
     }
 
@@ -38,18 +48,16 @@ itemContainer.forEach(item => {
 
     if (item) {
       yourCart.insertAdjacentHTML("afterbegin", `
-      <li class="flex justify-between border-b border-smalltext pb-4">
+      <li class="flex mt-2 justify-between border-b border-smalltext pb-4">
               <div class="item-info-container flex gap-8"> <img class="w-16 rounded-sm border-[#6AB3FE] border-2"
                   src=${item.querySelector("img").src} alt=${item.querySelector("img").alt}>
                 <div class="item-text-container flex flex-col my-auto gap-2">
-                  <h3 class="text-xl font-bold">${nameOfProduct}</h3>
+                  <h2 class="text-xl font-bold">${nameOfProduct}</h2>
                   <small class="text-[16px] font-extralight text-[#8B9FFF]">${currentAmount} x $${item.querySelector("span").textContent * currentAmount}</small >
                 </div >
               </div >
       <img class="w-4 h-4 cursor-pointer" src="images/ion--trash 1.png" alt="icon trash">
       </li>`);
-    } else if (!yourCart.querySelector(".item")) {
-      yourCart.insertAdjacentElement("afterbegin", "Your added items will appear here");
     }
   })
 })
