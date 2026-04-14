@@ -1,6 +1,8 @@
 const itemContainer = document.querySelectorAll(".item-container");
 const yourCart = document.getElementById("your-cart");
 
+const cart = {};
+
 
 itemContainer.forEach(item => {
   item.addEventListener("click", (e) => {
@@ -13,40 +15,37 @@ itemContainer.forEach(item => {
     const incrementBtn = e.target.classList.contains("increment");
     const decrementBtn = e.target.classList.contains("decrement");
 
-    const cart = {
-      name: nameOfProduct,
-      amount: 1,
-      price: Number(item.querySelector(".price").textContent)
-    }
-
-    currentAmount.textContent = cart.amount;
 
     function renderCart() {
       yourCart.innerHTML = "";
 
-
-      yourCart.insertAdjacentHTML("afterbegin", `
+      Object.values(cart).forEach(product => {
+        yourCart.insertAdjacentHTML("afterbegin", `
       <li class="flex mt-2 justify-between border-b border-smalltext pb-4">
               <div class="item-info-container flex gap-8"> <img class="w-16 rounded-sm border-[#6AB3FE] border-2"
-                  src=${item.querySelector("img").src} alt=${item.querySelector("img").alt}>
+                  src=${product.querySelector("img").src} alt=${product.querySelector("img").alt}>
                 <div class="item-text-container flex flex-col my-auto gap-2">
-                  <h2 class="text-xl font-bold">${cart.name}</h2>
-                  <small class="text-[16px] font-extralight text-[#8B9FFF]">${cart.amount} x $${cart.price * cart.amount}</small >
+                  <h2 class="text-xl font-bold">${name}</h2>
+                  <small class="text-[16px] font-extralight text-[#8B9FFF]">${amount} x $${price * amount}</small >
                 </div >
-              </div >
-      <img class="w-4 h-4 cursor-pointer" src="images/ion--trash 1.png" alt="icon trash">
+                </div >
+                <img class="w-4 h-4 cursor-pointer" src="images/ion--trash 1.png" alt="icon trash">
       </li>`);
+      })
     }
 
     if (incrementBtn) {
-      cart.amount++;
-      currentAmount.textContent = cart.amount;
-      renderCart();
-      if (!cart.name) {
-        renderCart();
-      } else {
-        cart.amount++;
+
+      if (!cart[nameOfProduct]) {
+        cart[nameOfProduct] = {
+          name: nameOfProduct,
+          amount: 1,
+          price: Number(item.querySelector(".price").textContent),
+        }
+        cart[nameOfProduct].amount++
+        currentAmount.textContent = Number(cart[nameOfProduct].amount);
       }
+
     } else if (decrementBtn) {
       cart.amount--;
       currentAmount.textContent = cart.amount;
@@ -70,8 +69,9 @@ itemContainer.forEach(item => {
 
 
 
-    addToCartBtn ? toggleAddToCart.classList.toggle("hidden") && toggleAmountChanger.classList.toggle("hidden") : null;
-
-    if (!addToCartBtn) return;
+    if (addToCartBtn) {
+      toggleAddToCart.classList.toggle("hidden");
+      toggleAmountChanger.classList.toggle("hidden");
+    }
   })
 })
